@@ -50,14 +50,14 @@ CREATE TABLE Product_Categories(
 );
 
 CREATE TABLE Carts(
-    cart_id SERIAL NOT NULL,
+    cart_id SERIAL PRIMARY KEY,
     user_id INT NOT NULL,
     created_at DATE NOT NULL,
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
 CREATE TABLE Cart_items(
-    cart_item_id SERIAL NOT NULL,
+    cart_item_id SERIAL PRIMARY KEY,
     cart_id INT NOT NULL,
     product_id INT NOT NULL,
     quantity INT NOT NULL,
